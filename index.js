@@ -4,15 +4,15 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json());
 
-// Replace with your details
-const FULL_NAME = "john_doe";
-const DOB = "17091999";  // ddmmyyyy
-const EMAIL = "john@xyz.com";
-const ROLL_NUMBER = "ABCD123";
 
-// Check helpers
+const FULL_NAME = "KOMMULA VENKATA UMA SURYA VARDHA ";
+const DOB = "25052004";  
+const EMAIL = "suryavardhan.22bce7228@vitapstudent.ac.in";
+const ROLL_NUMBER = "22BCE7228";
+
+
 function isNumber(str) {
-  return /^-?\d+$/.test(str); // handles integers (positive & negative)
+  return /^-?\d+$/.test(str); 
 }
 
 function isAlphabet(str) {
@@ -62,7 +62,7 @@ app.post("/bfhl", (req, res) => {
       }
     });
 
-    // Reverse alphabets and apply alternating caps
+    
     let concatString = "";
     if (concatAlpha.length > 0) {
       let reversed = concatAlpha.split("").reverse().join("");
